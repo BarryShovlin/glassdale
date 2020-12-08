@@ -30,7 +30,6 @@ eventHub.addEventListener("officerSelected", event => {
     if (event.detail.selectedOfficer !== "0") {
     
         const officerName = useOfficers()
-        console.log("test", officerName)
         const arrestingOfficer = officerName.find( (officer) => officer.id === parseInt(event.detail.officer))
 
         const criminals = useCriminals()
