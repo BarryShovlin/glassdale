@@ -1,5 +1,4 @@
 import { getCriminals, useCriminals } from "../criminalProvider.js"
-import { associateHTML } from "../Alibis/alibiHTMLConverter.js"
 
 
 const contentTarget = document.querySelector(".associate_alibi")
@@ -12,22 +11,19 @@ eventHub.addEventListener("alibiButtonClicked", event => {
     const criminals = useCriminals()
     const chosenCriminal = criminals.find( (criminal) => criminal.id === parseInt(event.detail.criminalThatWasChosen))
  
-    const buddies = chosenCriminal.known_associates
-    contentTarget.innerHTML =  buddies.map(buddy => associateHTML(buddy)).join("")
+    contentTarget.innerHTML = `
+    <h3 class="crimName">Known Associates of ${chosenCriminal.name}</h3>
+    ${chosenCriminal.known_associates.map(buddy => `
+    <h4 class=associate_name>${buddy.name}</h4>
+    <h3 class="alibi>Alibi: ${buddy.alibi}</h3>
+    `).join("")
+   
+   }`
+}
+}
+)
 
-   }
-})
 
 
 
   
-
-
-
-export const alibiList = () => {
-    getCriminals()
-        .then(() => {
-            const allCriminals = useCriminals()
-            render(allCriminals)
-        })
-    }
