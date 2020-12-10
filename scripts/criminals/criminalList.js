@@ -55,8 +55,7 @@ export const CriminalList = () => {
         render(perps)
             }
     )
-  
-        }
+  }
     
     const render = (criminals) => {
         let criminalCards = []

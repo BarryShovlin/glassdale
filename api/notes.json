@@ -17,9 +17,16 @@
     {
       "author": "barry",
       "text": "test",
-      "suspect": "poo poo mscgyger",
+      "suspect": "Poo Poo MacGyver",
       "timestamp": 1607461067854,
       "id": 3
+    },
+    {
+      "author": "",
+      "text": "",
+      "suspect": "",
+      "timestamp": 1607548692772,
+      "id": 4
     }
   ]
 }
