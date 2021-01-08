@@ -4,6 +4,7 @@ import { useConvictions } from "../conviction/ConvictionProvider.js"
 import { useOfficers } from "../officers/OfficerProvider.js"
 import { getFacilities, useFacilities } from "../facility/facilityProvider.js"
 import { getCriminalFacilities, useCriminalFacilities } from "../facility/criminalFacilityProvider.js"
+import { buddyDialog } from "../criminals/Alibis/alibiList.js"
 
 
 const eventHub = document.querySelector(".container")
